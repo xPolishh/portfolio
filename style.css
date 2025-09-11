@@ -17,12 +17,13 @@ body{
     justify-content: center;
     align-items: center;
 
-    width: 450px;
-    height: 450px;
+    width: 350px;
+    height: 350px;
     border-radius: 100%;
     background-image: linear-gradient(#054766 10%, #ffffff);
     filter: blur(150px);
-    transition: all 450ms ease-out;
+    transition: transform 120ms ease-out;
+    transition: width,height 80ms ease-in-out;
 
     position: fixed;
     pointer-events: none;
