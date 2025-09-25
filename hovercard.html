@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hovar</title>
+
+    <style>
+        *{
+            font-family: georgia;
+        }
+        body {
+            background-color: rgb(19, 19, 19);
+            margin: 0px;
+            padding: 20px;
+            color: white;
+            height: 90vh;
+        }
+
+        .hv {
+            color: white;
+            transition: ease-in .2s;
+            width:fit-content;
+        }
+
+        .hv:hover {
+            color: rgb(247, 203, 46);
+            cursor: pointer;
+            transition: ease-in .2s;
+        }
+
+        .sigma {
+            position: absolute;
+            border: 1px rgb(89, 89, 89) solid;
+            background-color: rgba(0, 0, 0, 0.65);
+            width: 300px;
+            height: 150px;
+
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+
+            padding: 10px;
+
+            background-position: center 60%;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            opacity: 0;
+            transform: translateY(10px); 
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+    </style>
+</head>
+<body onmousemove="coordinate(event)">
+    <main>
+        <!-- <img src="https://www.divinumofficium.com/www/missa/missa.png" style="width: 48vw;"> -->
+        <h2 class="hv 1">Hover over me!</h2>
+        <h2 class="hv 2">Me too!</h2>
+        <h2 class="hv 3">Frieren jupscare</h2>
+        <h2 class="hv 4">(?)</h2>
+    </main>
+
+    <script>
+        let hvrbs = document.querySelectorAll("h2.hv");
+        const b = document.querySelector("body")
+        let x, y
+
+        function coordinate(event) {
+            x = event.clientX;
+            y = event.clientY;
+        }
+
+        let c1 = "This is text 1<br>Amogus"
+        let c2 = "This is text 2<br>SUUUUUUS"
+
+        hvrbs.forEach((hvrb) => {
+            let id=hvrb.classList
+            hvrb.addEventListener("mouseover", () => {
+                let box = document.createElement("div");
+
+                if (id.contains("1")) {box.style.backgroundImage="url(https://media.tenor.com/G0OBtQPRa40AAAAM/cat-funny-looking-camera-cat-smurf.gif)"} 
+                else if (id.contains("2")) {box.style.backgroundImage="url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSltpC7_J5KFmbxhAhCWERG9s0S-O8Z4lVgEQ&s)"}
+                else if (id.contains("3")) {box.style.backgroundImage="url(https://pbs.twimg.com/profile_images/1846642353425059840/oS6t5M_F_400x400.jpg)"}
+                else if (id.contains("4")) {box.style.backgroundImage="url(https://scontent.fktw4-1.fna.fbcdn.net/v/t1.15752-9/462535381_1893333821154235_2743562913982956009_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=R05Tg-EUp6QQ7kNvgGcRs_C&_nc_zt=23&_nc_ht=scontent.fktw4-1.fna&_nc_gid=AbswbP7k58hIWGGy52CtxCI&oh=03_Q7cD1QGwq6D3el99IYasaGscRz96oPnRtSI73xk9zvdHT20rrQ&oe=6741FBD4)"}
+
+                box.classList.add("sigma");
+                b.appendChild(box);
+
+                setTimeout(() => {
+                    box.style.opacity = "1";
+                    box.style.transform = "translateY(0)";
+                }, 10);
+
+                hvrb.addEventListener("mousemove", () => {
+                    box.style.top = (y + 20) + "px";
+                    box.style.left = (x + 15) + "px";
+
+                    hvrb.addEventListener("mouseout", () => {
+                        box.style.opacity = "0";  
+                        box.style.transform = "translateY(10px)"; 
+
+                        setTimeout(() => {
+                            box.remove();
+                        }, 300);
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
