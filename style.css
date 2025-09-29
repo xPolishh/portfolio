@@ -15,7 +15,6 @@ body{
     display: flex;
     margin: 0px;
     padding: 0px; 
-
 }
 
 
@@ -27,6 +26,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 
@@ -149,8 +149,17 @@ header>em{
 }
 
 
+section{
+  background: #242424;
+  background: linear-gradient(0deg, rgba(36, 36, 36, 1) 63%, rgba(0, 0, 0, 0.35) 100%);
+  transition: background .5s ease-in-out;
+}
+/* section:hover{
+  background: #242424;
+  background: linear-gradient(0deg, rgba(36, 36, 36, 1) 63%, rgba(0, 0, 0, 0.35) 100%);
+} */
 .book-container{
-  margin-top: 20px;
+  margin-top: 25px;
   display: flex;
   width: 100%;
   justify-content: center;
@@ -160,6 +169,10 @@ header>em{
   z-index: 1;
   position: relative;
   pointer-events: none
+}
+.book-container>h4{
+  margin: 0;
+  font-weight: lighter;
 }
 .book-container *{
   pointer-events: auto;
@@ -172,12 +185,14 @@ header>em{
 
 .book{
   width: 40%;
-  height: 50vh;
+  height: 23vw;
   background-image: url(bookSprite.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
 
   padding: 5%;
+  margin: 8px;
   color: black;
 
   display: flex;
@@ -185,7 +200,11 @@ header>em{
 }
 .right-page, .left-page{
   width: 50%;
-  height: 50vh;
+  height: 23vw;
+  font-size: 1.6vw;
+}
+.left-page{
+  margin-right: 5px;
 }
 .right-page{
   display: flex;
@@ -200,7 +219,7 @@ header>em{
   justify-content: center;
   flex-direction: column;
   padding-top: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   padding-left: 10px;
   padding-right: 10px;
 
@@ -225,6 +244,7 @@ header>em{
 }
 .projects-header>h2{
   animation: wobble 2s ease-in-out infinite;
+  margin: 10px;
 }
 
 @keyframes wobble {
@@ -238,8 +258,8 @@ header>em{
 .projects-tile{
   width: 50%;
   height: 200px;
-  /* background-color: #242424; */
   transition: all 0.2s ease-in-out;
+  /* background-color: #3030308b; */
   /* box-shadow: none; */
 
   border-radius: 5px;
@@ -266,12 +286,51 @@ header>em{
 }
 
 
+.top-left-project{
+  background-image: url(https://lovethynerd.com/wp-content/uploads/2023/12/120523-article-BG.jpg);
+  background-position: center;
+  background-size: 100%;
+}
+.top-right-project{
+  background-image: url(https://animewarcrimetribunal.wordpress.com/wp-content/uploads/2024/03/apothecary-1.jpg);
+  background-position: 0% 35%;
+  background-size: 100%;
+}
+.bottom-left-project{
+  background-image: url(https://pliki.ppe.pl/storage/0f3990443867d54bb076/0f3990443867d54bb076.jpg);
+  background-position: 0% 20%;
+  background-size: 100%;
+}
+.bottom-right-project{
+  background-image: url(https://images.justwatch.com/backdrop/318298763/s640/bocchi-the-rock);
+  background-position: 0% 15%;
+  background-size: 100%;
+}
+
+
+
 
 footer{
   background-color: black;
   height: 100px;
   width: 100%;
 }
+/* footer::backdrop{
+  background-color: red;
+  width: 150%;
+  height: 100px;
+  bottom: 20%;
+} */
+
+.footer-black{
+  /* background-color: black;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  bottom: 0; */
+  display: none;
+}
+
 
 
 
