@@ -248,11 +248,21 @@ section{
 
   border-radius: 5px;
 }
+.projects-tile>span{
+  /* background: rgba(0,0,0,0.4);  */
+  backdrop-filter: blur(12px);
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
 .projects-tile:hover{
    /* box-shadow: inset 5px 5px 10px #1a1a1a,
               inset -5px -5px 10px #2e2e2e; */
     transform: scale(1.01);
 }
+
+
 .project-items{
   display:flex;
   flex-wrap: wrap;
@@ -272,27 +282,43 @@ section{
 
 .top-left-project{
   /* background-image: url(https://lovethynerd.com/wp-content/uploads/2023/12/120523-article-BG.jpg); */
-  background-color: rgba(186, 3, 3, 0.419);
+  background-image: url(gra.png);
+  /* background-color: rgba(186, 3, 3, 0.419); */
   background-position: center;
   background-size: 100%;
 }
 .top-right-project{
   /* background-image: url(https://animewarcrimetribunal.wordpress.com/wp-content/uploads/2024/03/apothecary-1.jpg); */
-  background-color: rgba(0, 128, 0, 0.419);
+  background-image: url(todo.png);
+  /* background-color: rgba(0, 128, 0, 0.419); */
   background-position: 0% 35%;
   background-size: 100%;
+
+  text-align: right;
 }
 .bottom-left-project{
   /* background-image: url(https://pliki.ppe.pl/storage/0f3990443867d54bb076/0f3990443867d54bb076.jpg); */
-  background-color: rgba(0, 0, 163, 0.419);
+  background-image: url(wither.png);
+  /* background-color: rgba(0, 0, 163, 0.419); */
   background-position: 0% 20%;
   background-size: 100%;
 }
+.bottom-left-project::before{
+  z-index: 3;
+  backdrop-filter: blur(20px);
+  left: 0;
+  right: 0;
+  width: 50%;
+  height: 200px;
+}
 .bottom-right-project{
   /* background-image: url(https://images.justwatch.com/backdrop/318298763/s640/bocchi-the-rock); */
-  background-color: rgba(191, 124, 0, 0.419);
-  background-position: 0% 15%;
+  background-image: url(https://media.tenor.com/G0OBtQPRa40AAAAM/cat-funny-looking-camera-cat-smurf.gif);
+  /* background-color: rgba(191, 124, 0, 0.419); */
+  background-position: 0% 40%;
   background-size: 100%;
+
+  text-align: right;
 }
 
 
@@ -331,6 +357,39 @@ section{
   color: white;
 }
 
+.languages{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 3px rgba(255, 255, 255, 0.30) solid;
+  border-right: 3px rgba(255, 255, 255, 0.30) solid;
+  border-radius: 10px;
+  width: 85%;
+
+  gap: 4%;
+  margin: 20px;
+  margin-bottom: 10px;
+}
+
+.languages>a{
+  width: 100%;
+  transition: transform 220ms ease-in-out;
+  text-align: center;
+}
+.languages>a:hover{
+  transform: translateY(-10px) scale(1.05);
+}
+
+
+
+
+.vsc{
+  background-color: rgba(255, 255, 255, 0.078);
+  padding: 8px;
+  border-radius: 5px;
+}
+
+
 
 footer{
   bottom: 0;
@@ -360,21 +419,7 @@ footer>hr{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.glow {
+/* .glow {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -393,5 +438,4 @@ footer>hr{
     top: 0;
     transform: translate(calc(-50% + 25px), -50%);
     z-index: -1;
-}
-
+} */
