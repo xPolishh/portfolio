@@ -138,10 +138,8 @@ section{
   background: linear-gradient(0deg, rgba(36, 36, 36, 1) 63%, rgba(0, 0, 0, 0.35) 100%);
   transition: background .5s ease-in-out;
 }
-/* section:hover{
-  background: #242424;
-  background: linear-gradient(0deg, rgba(36, 36, 36, 1) 63%, rgba(0, 0, 0, 0.35) 100%);
-} */
+
+
 .book-container{
   margin-top: 25px;
   display: flex;
@@ -189,6 +187,9 @@ section{
 }
 .left-page{
   margin-right: 5px;
+}
+.left-page>h3{
+  margin: 0;
 }
 .right-page{
   display: flex;
@@ -243,25 +244,34 @@ section{
   width: 50%;
   height: 200px;
   transition: all 0.2s ease-in-out;
-  /* background-color: #3030308b; */
-  /* box-shadow: none; */
-
+  
   border-radius: 5px;
 }
 .projects-tile>span{
-  /* background: rgba(0,0,0,0.4);  */
   backdrop-filter: blur(12px);
   color: white;
   width: 100%;
   height: 100%;
   display: flex;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .projects-tile:hover{
-   /* box-shadow: inset 5px 5px 10px #1a1a1a,
-              inset -5px -5px 10px #2e2e2e; */
-    transform: scale(1.01);
+  transform: scale(1.01);
 }
-
+.projects-tile>span>h4{
+  margin: 0;
+}
+.projects-tile>span>hr{
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+.projects-tile>span>a{
+  text-decoration: underline;
+  color: orange;
+}
 
 .project-items{
   display:flex;
@@ -281,23 +291,21 @@ section{
 
 
 .top-left-project{
-  /* background-image: url(https://lovethynerd.com/wp-content/uploads/2023/12/120523-article-BG.jpg); */
   background-image: url(gra.png);
-  /* background-color: rgba(186, 3, 3, 0.419); */
   background-position: center;
   background-size: 100%;
 }
+.top-left-project>span{
+  background: rgba(0, 0, 0, 0.552); 
+}
+
 .top-right-project{
-  /* background-image: url(https://animewarcrimetribunal.wordpress.com/wp-content/uploads/2024/03/apothecary-1.jpg); */
   background-image: url(todo.png);
   /* background-color: rgba(0, 128, 0, 0.419); */
   background-position: 0% 35%;
   background-size: 100%;
-
-  text-align: right;
 }
 .bottom-left-project{
-  /* background-image: url(https://pliki.ppe.pl/storage/0f3990443867d54bb076/0f3990443867d54bb076.jpg); */
   background-image: url(wither.png);
   /* background-color: rgba(0, 0, 163, 0.419); */
   background-position: 0% 20%;
@@ -312,13 +320,12 @@ section{
   height: 200px;
 }
 .bottom-right-project{
-  /* background-image: url(https://images.justwatch.com/backdrop/318298763/s640/bocchi-the-rock); */
   background-image: url(https://media.tenor.com/G0OBtQPRa40AAAAM/cat-funny-looking-camera-cat-smurf.gif);
-  /* background-color: rgba(191, 124, 0, 0.419); */
   background-position: 0% 40%;
   background-size: 100%;
-
-  text-align: right;
+}
+.bottom-right-project>span{
+background: rgba(0,0,0,0.4); 
 }
 
 
